@@ -21,7 +21,7 @@ const Work = () => {
 
   return (
     <div
-      id="education"
+      id="work"
       className="flex justify-center items-center flex-col max-w-[1540px] m-auto md:pl-20 p-4 py-20"
     >
       <h1 className="text-4xl font-bold text-center text-[#001b5e]">Work</h1>
