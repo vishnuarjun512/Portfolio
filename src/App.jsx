@@ -1,4 +1,5 @@
 import Contact from "./components/Contact";
+import Education from "./components/Education";
 import Main from "./components/Main";
 import Projects from "./components/Projects";
 import Work from "./components/Work";
@@ -11,6 +12,7 @@ function App() {
       <SideNav />
       <Main />
       <Work />
+      <Education />
       <Projects />
       <Contact />
     </div>

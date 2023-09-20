@@ -1,7 +1,13 @@
 import React from "react";
 import img from "../assets/background.jpeg";
 import { TypeAnimation } from "react-type-animation";
-import { FaTwitter, FaFacebookF, FaInstagram, FaGithub } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaFacebookF,
+  FaInstagram,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const Main = () => {
   return (
@@ -23,11 +29,11 @@ const Main = () => {
                 // Same substring at the start will only be typed out once, initially
                 "Web Developer",
                 2000, // wait 1s before replacing "Mice" with "Hamsters"
-                "Coder",
+                "PHP Developer",
                 2000,
                 "Tech Enthusiast",
                 2000,
-                "PHP Developer",
+                "Python Developer",
                 2000,
               ]}
               wrapper="div"
@@ -37,11 +43,37 @@ const Main = () => {
               repeat={Infinity}
             />
           </h2>
-          <div className="flex justify-between pt-6 max-w-[200px] w-full">
-            <FaTwitter className="cursor-pointer" size={30} />
-            <FaFacebookF className="cursor-pointer" size={30} />
-            <FaInstagram className="cursor-pointer" size={30} />
-            <FaGithub className="cursor-pointer" size={30} />
+          <div className="flex justify-between pt-6 max-w-[200px] w-full hover:scale-110 hover:shadow-gray-300 duration-100 ease-in">
+            <a href="https://github.com/vishnuarjun512">
+              <FaGithub
+                className="cursor-pointer hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in"
+                size={30}
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/vishnuarjun512/">
+              <FaLinkedin
+                className="cursor-pointer hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in"
+                size={30}
+              />
+            </a>
+            <a href="https://twitter.com/VishnuArjun12">
+              <FaTwitter
+                className="cursor-pointer hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in"
+                size={30}
+              />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100010680883981">
+              <FaFacebookF
+                className="cursor-pointer hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in"
+                size={30}
+              />
+            </a>
+            <a href="https://www.instagram.com/vishnu_arjun_/">
+              <FaInstagram
+                className="cursor-pointer hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in"
+                size={30}
+              />
+            </a>
           </div>
         </div>
       </div>
