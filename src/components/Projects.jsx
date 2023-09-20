@@ -12,7 +12,7 @@ const Projects = () => {
         Projects
       </h1>
       <p className="text-center text-xl pt-4 pb-6">Checkout my Projects!</p>
-      <div className="grid sm:grid-cols-2 gap-12">
+      <div className="grid md:grid-cols-2 gap-12">
         <ProjectItem
           img={mtvx}
           title={"Movie Streaming Website"}
