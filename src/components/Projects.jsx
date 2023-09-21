@@ -4,6 +4,7 @@ import DA from "../assets/dataAnalytics.png";
 import mtvx from "../assets/mtvx.png";
 import planti from "../assets/planti.png";
 import portfolio from "../assets/portfolio.png";
+import calculator from "../assets/calculator.png";
 
 const Projects = () => {
   return (
@@ -32,6 +33,11 @@ const Projects = () => {
           img={portfolio}
           title={"Portfolio"}
           link={"https://github.com/vishnuarjun512/portfolio"}
+        />
+        <ProjectItem
+          img={calculator}
+          title={"Simple Calculator"}
+          link={"https://github.com/vishnuarjun512/Calculator"}
         />
       </div>
     </div>
