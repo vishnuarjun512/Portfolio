@@ -10,13 +10,13 @@ const Work = () => {
       duration: "Present",
       details: "Willing to build Websites for experience",
     },
-    {
-      year: 2023,
-      title: "Web Developer",
-      company: "Solar Secure Solutions",
-      duration: "3 Months",
-      details: "Trained and Working on Industry Level Projects",
-    },
+    // {
+    //   year: 2023,
+    //   title: "Web Developer",
+    //   company: "Solar Secure Solutions",
+    //   duration: "3 Months",
+    //   details: "Trained and Working on Industry Level Projects",
+    // },
   ];
 
   return (
