@@ -70,36 +70,59 @@ const SideNav = () => {
 
       <div className="md:block hidden fixed top-[25%] left-[1%] z-10">
         <div className="flex flex-col gap-[12px] ">
-          <a
-            href="#main"
-            className=" rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
-          >
-            <AiOutlineHome size={30} />
-          </a>
-          <a
-            href="#work"
-            className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
-          >
-            <GrProjects size={30} />
-          </a>
-          <a
-            href="#education"
-            className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
-          >
-            <BsPerson size={30} />
-          </a>
-          <a
-            href="#projects"
-            className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
-          >
-            <AiOutlineProject size={30} />
-          </a>
-          <a
-            href="#contact"
-            className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
-          >
-            <AiOutlineMail size={30} />
-          </a>
+          <div className="flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
+            <a
+              href="#main"
+              id="hover-button"
+              className="flex flex-row flex-initial rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+            >
+              <AiOutlineHome size={40} />
+            </a>
+            <div id="hover-text">Home</div>
+          </div>
+
+          <div className="flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
+            <a
+              href="#work"
+              id="hover-button"
+              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+            >
+              <GrProjects size={40} />
+            </a>
+            <div id="hover-text">Work</div>
+          </div>
+
+          <div className=" left-0 flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
+            <a
+              id="hover-button"
+              href="#education"
+              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+            >
+              <BsPerson size={40} />
+            </a>
+            <div id="hover-text">Education</div>
+          </div>
+
+          <div className="left-0 flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
+            <a
+              href="#projects"
+              id="hover-button"
+              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+            >
+              <AiOutlineProject size={40} />
+            </a>
+            <div id="hover-text">Projects</div>
+          </div>
+          <div className="left-0 flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
+            <a
+              href="#contact"
+              id="hover-button"
+              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+            >
+              <AiOutlineMail size={40} />
+            </a>
+            <div id="hover-text">Contact Me</div>
+          </div>
         </div>
       </div>
     </div>

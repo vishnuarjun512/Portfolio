@@ -76,7 +76,7 @@ const Main = () => {
             </a>
           </div>
         </div>
-        <div className="absolute right-2 bottom-2 z-1 rounded-full shadow-lg sm:mx-2 mr-[-4px] sm:my-1 my-0 p-1 bg-gray-200 shadow-gray-500 cursor-pointer hover:scale-[1.2] ease-in duration-100 ">
+        <div className="absolute right-2 bottom-2 z-1 rounded-full shadow-lg sm:mx-2 mr-[-4px] sm:my-1 my-1 p-1 bg-gray-200 shadow-gray-500 cursor-pointer hover:scale-[1.2] ease-in duration-100 ">
           {/* <a href="RESUME.pdf" download="Vishnu's Resume.pdf"> */}
           <button
             onClick={() => openPdfWindow("RESUME.pdf")}
