@@ -11,6 +11,20 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import "./SideNav.css";
 
 const Main = () => {
+  function openPdfWindow(pdfUrl) {
+    const newWindow = window.open("", "_blank");
+    newWindow.document.write(`
+      <html>
+        <head>
+          <title>PDF Viewer</title>
+        </head>
+        <body style="margin: 0;">
+          <iframe src="${pdfUrl}" style="width: 100%; height: 100vh; border: none;"></iframe>
+        </body>
+      </html>
+    `);
+  }
+
   return (
     <div id="main">
       <img
@@ -61,6 +75,16 @@ const Main = () => {
               <FaSquareXTwitter className="md:w-[50px] md:h-[50px] w-[30px] h-[30px] cursor-pointer hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in" />
             </a>
           </div>
+        </div>
+        <div className="absolute right-2 bottom-2 z-1 rounded-full shadow-lg sm:mx-2 mr-[-4px] sm:my-1 my-0 p-1 bg-gray-200 shadow-gray-500 cursor-pointer hover:scale-[1.2] ease-in duration-100 ">
+          {/* <a href="RESUME.pdf" download="Vishnu's Resume.pdf"> */}
+          <button
+            onClick={() => openPdfWindow("RESUME.pdf")}
+            className="sm:text-[13px] text-[9px]  font-bold  sm:h-[30px] h-[15px] sm:w-[100px] w-[60px] flex items-center justify-center"
+          >
+            My Resume
+          </button>
+          {/* </a> */}
         </div>
       </div>
     </div>
