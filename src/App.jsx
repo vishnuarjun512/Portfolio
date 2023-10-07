@@ -1,4 +1,5 @@
 import Contact from "./components/Contact";
+import DarkMode from "./components/DarkMode";
 import Education from "./components/Education";
 import Main from "./components/Main";
 import Projects from "./components/Projects";
@@ -9,6 +10,7 @@ import React from "react";
 function App() {
   return (
     <div>
+      {/* <DarkMode /> */}
       <SideNav />
       <Main />
       <Work />

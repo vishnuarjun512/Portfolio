@@ -12,12 +12,12 @@ const ProjectItem = ({ img, title, link }) => {
         <div className="md:mt-[-8px] mt-[2px]">
           <p className="pb-4 pt-22 text-white text-center">React JS</p>
           <a href={link}>
-            <p className="sm:text-[13px] text-[13px] flex items-center justify-center text-center sm:p-3 p-[.65rem] rounded-lg bg-white text-gray-700 font-bold cursor-pointer hover:scale-110 ease-in duration-200">
+            <div className="sm:text-[13px] text-[13px] flex items-center justify-center text-center sm:p-3 p-[.65rem] rounded-lg bg-white text-gray-700 font-bold cursor-pointer hover:scale-110 ease-in duration-200">
               <FaGithub className="w-[40px] h-[40px]" />
               <p className="p-0 ml-[-8px] sm:ml-4">
                 Click to check source code
               </p>
-            </p>
+            </div>
           </a>
         </div>
       </div>

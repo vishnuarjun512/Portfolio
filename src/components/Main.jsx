@@ -60,19 +60,39 @@ const Main = () => {
             />
           </h2>
           <div className="flex justify-center gap-[10px] pt-6 max-w-[200px] w-full hover:scale-110 hover:shadow-gray-300 duration-100 ease-in">
-            <a href="https://github.com/vishnuarjun512">
+            <a
+              href="https://github.com/vishnuarjun512"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithubSquare className="md:w-[50px] md:h-[50px] w-[30px] h-[30px] cursor-pointer hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in" />
             </a>
-            <a href="https://www.linkedin.com/in/vishnuarjun512/">
+            <a
+              href="https://www.linkedin.com/in/vishnuarjun512/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin className="md:w-[50px] md:h-[50px] w-[30px] h-[30px] cursor-pointer hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in" />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=100010680883981">
+            <a
+              href="https://www.facebook.com/profile.php?id=100010680883981"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebookSquare className="md:w-[50px] md:h-[50px] w-[30px] h-[30px] cursor-pointer hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in" />
             </a>
-            <a href="https://www.instagram.com/vishnu_arjun_/">
+            <a
+              href="https://www.instagram.com/vishnu_arjun_/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagramSquare className="md:w-[50px] md:h-[50px] w-[30px] h-[30px] cursor-pointer hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in" />
             </a>
-            <a href="https://twitter.com/VishnuArjun12">
+            <a
+              href="https://twitter.com/VishnuArjun12"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaSquareXTwitter className="md:w-[50px] md:h-[50px] w-[30px] h-[30px] cursor-pointer hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in" />
             </a>
           </div>
