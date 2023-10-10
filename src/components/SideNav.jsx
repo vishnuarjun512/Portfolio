@@ -84,7 +84,7 @@ const SideNav = () => {
               id="hover-button"
               className="flex flex-row flex-initial rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
             >
-              <AiOutlineHome size={40} />
+              <AiOutlineHome size={30} />
             </a>
             <div id="hover-text">Home</div>
           </div>
@@ -95,7 +95,7 @@ const SideNav = () => {
               id="hover-button"
               className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
             >
-              <GiSkills size={40} />
+              <GiSkills size={30} />
             </a>
             <div id="hover-text">Skills</div>
           </div>
@@ -106,7 +106,7 @@ const SideNav = () => {
               id="hover-button"
               className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
             >
-              <AiOutlineProject size={40} />
+              <AiOutlineProject size={30} />
             </a>
             <div id="hover-text">Projects</div>
           </div>
@@ -117,7 +117,7 @@ const SideNav = () => {
               id="hover-button"
               className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
             >
-              <GrProjects size={40} />
+              <GrProjects size={30} />
             </a>
             <div id="hover-text">Work</div>
           </div>
@@ -128,7 +128,7 @@ const SideNav = () => {
               href="#education"
               className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
             >
-              <BsPerson size={40} />
+              <BsPerson size={30} />
             </a>
             <div id="hover-text">Education</div>
           </div>
@@ -139,7 +139,7 @@ const SideNav = () => {
               id="hover-button"
               className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
             >
-              <AiOutlineMail size={40} />
+              <AiOutlineMail size={30} />
             </a>
             <div id="hover-text">Contact Me</div>
           </div>
