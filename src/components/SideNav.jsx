@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import { GrProjects } from "react-icons/gr";
 import { BsMailbox, BsPerson } from "react-icons/bs";
+import { GiSkills } from "react-icons/gi";
 
 const SideNav = () => {
   const [nav, setNav] = useState(false);
@@ -32,11 +33,19 @@ const SideNav = () => {
           </a>
           <a
             onClick={handleNav}
-            href="#education"
+            href="#skills"
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
-            <BsPerson size={20} />
-            <span className="pl-4"> Resume </span>
+            <GiSkills size={20} />
+            <span className="pl-4"> Skills </span>
+          </a>
+          <a
+            onClick={handleNav}
+            href="#projects"
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+          >
+            <AiOutlineProject size={20} />
+            <span className="pl-4"> Projects </span>
           </a>
           <a
             onClick={handleNav}
@@ -48,27 +57,26 @@ const SideNav = () => {
           </a>
           <a
             onClick={handleNav}
-            href="#projects"
+            href="#education"
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
-            <AiOutlineProject size={20} />
-            <span className="pl-4"> Projects </span>
+            <BsPerson size={20} />
+            <span className="pl-4"> Education </span>
           </a>
-
           <a
             onClick={handleNav}
             href="#contact"
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineMail size={20} />
-            <span className="pl-4"> Contact </span>
+            <span className="pl-4"> Contact Me</span>
           </a>
         </div>
       ) : (
         ""
       )}
 
-      <div className="md:block hidden fixed top-[25%] left-[1%] z-10">
+      <div className="md:block hidden fixed top-[15%] left-[1%] z-10">
         <div className="flex flex-col gap-[12px] ">
           <div className="flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
             <a
@@ -79,6 +87,28 @@ const SideNav = () => {
               <AiOutlineHome size={40} />
             </a>
             <div id="hover-text">Home</div>
+          </div>
+
+          <div className="left-0 flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
+            <a
+              href="#skills"
+              id="hover-button"
+              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+            >
+              <GiSkills size={40} />
+            </a>
+            <div id="hover-text">Skills</div>
+          </div>
+
+          <div className="left-0 flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
+            <a
+              href="#projects"
+              id="hover-button"
+              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+            >
+              <AiOutlineProject size={40} />
+            </a>
+            <div id="hover-text">Projects</div>
           </div>
 
           <div className="flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
@@ -103,16 +133,6 @@ const SideNav = () => {
             <div id="hover-text">Education</div>
           </div>
 
-          <div className="left-0 flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
-            <a
-              href="#projects"
-              id="hover-button"
-              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
-            >
-              <AiOutlineProject size={40} />
-            </a>
-            <div id="hover-text">Projects</div>
-          </div>
           <div className="left-0 flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
             <a
               href="#contact"
