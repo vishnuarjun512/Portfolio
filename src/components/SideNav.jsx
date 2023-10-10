@@ -76,7 +76,7 @@ const SideNav = () => {
         ""
       )}
 
-      <div className="md:block hidden fixed top-[15%] left-[1%] z-10">
+      <div className="md:block hidden fixed top-[50%] translate-y-[-50%] ml-5 z-10">
         <div className="flex flex-col gap-[12px] ">
           <div className="flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
             <a
