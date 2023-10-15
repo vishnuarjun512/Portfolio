@@ -49,19 +49,11 @@ const SideNav = () => {
           </a>
           <a
             onClick={handleNav}
-            href="#work"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <GrProjects size={20} />
-            <span className="pl-4"> Work </span>
-          </a>
-          <a
-            onClick={handleNav}
-            href="#education"
+            href="#resume"
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <BsPerson size={20} />
-            <span className="pl-4"> Education </span>
+            <span className="pl-4"> Resume </span>
           </a>
           <a
             onClick={handleNav}
@@ -111,26 +103,15 @@ const SideNav = () => {
             <div id="hover-text">Projects</div>
           </div>
 
-          <div className="flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
-            <a
-              href="#work"
-              id="hover-button"
-              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
-            >
-              <GrProjects size={30} />
-            </a>
-            <div id="hover-text">Work</div>
-          </div>
-
           <div className=" left-0 flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
             <a
               id="hover-button"
-              href="#education"
+              href="#resume"
               className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
             >
               <BsPerson size={30} />
             </a>
-            <div id="hover-text">Education</div>
+            <div id="hover-text">Resume</div>
           </div>
 
           <div className="left-0 flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">

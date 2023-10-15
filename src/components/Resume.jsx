@@ -4,7 +4,7 @@ import Work from "./Work";
 
 const Resume = () => {
   return (
-    <div className="md:flex">
+    <div id="resume" className="flex flex-col md:flex-row justify-center">
       <Education />
       <Work />
     </div>

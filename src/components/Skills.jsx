@@ -1,6 +1,7 @@
 import React from "react";
 import html from "../assets/Icons/html5.png";
 import css from "../assets/Icons/css.png";
+import sass from "../assets/Icons/sass.png";
 import js from "../assets/Icons/js.png";
 import tailwind from "../assets/Icons/tailwind.png";
 import react from "../assets/Icons/react.png";
@@ -25,6 +26,7 @@ const Skills = () => {
         { name: "CSS", source: css, level: 4 },
         { name: "JavaScript", source: js, level: 3 },
         { name: "React", source: react, level: 2 },
+        { name: "SASS", source: sass, level: 3 },
         { name: "Tailwind", source: tailwind, level: 4 },
       ],
     },
@@ -59,6 +61,21 @@ const Skills = () => {
       ],
     },
   ];
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      //For Each Entry
+      console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".hide");
+  hiddenElements.forEach((el) => observer.observe(el));
 
   return (
     <div
