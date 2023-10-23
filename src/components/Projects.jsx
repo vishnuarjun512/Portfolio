@@ -5,6 +5,7 @@ import mtvx from "../assets/mtvx.png";
 import planti from "../assets/planti.png";
 import portfolio from "../assets/portfolio.png";
 import calculator from "../assets/calculator.png";
+import imageGallery from "../assets/imageGallery.png";
 
 const Projects = () => {
   return (
@@ -17,6 +18,11 @@ const Projects = () => {
       </h1>
       <p className="text-center text-xl pt-4 pb-6">Checkout my Projects!</p>
       <div className="grid md:grid-cols-2 gap-12">
+        <ProjectItem
+          img={imageGallery}
+          title={"Image Gallery"}
+          link={"https://github.com/vishnuarjun512/Calculator"}
+        />
         <ProjectItem
           img={mtvx}
           title={"Movie Streaming Website"}
