@@ -5,7 +5,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Resume from "./components/Resume";
 
-import SideNav from "./components/sideNav";
+import SideNav from "./components/SideNav";
 import React from "react";
 
 function App() {
