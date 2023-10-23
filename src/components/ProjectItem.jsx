@@ -3,8 +3,12 @@ import { FaGithub } from "react-icons/fa";
 
 const ProjectItem = ({ img, title, link }) => {
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r hover:scale-[1.0150] from-gray-200 to-[#001b5e] ease-in-out duration-700">
-      <img className="rounded-xl group-hover:opacity-10" src={img} alt="/" />
+    <div className="max-w-[100%] relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r hover:scale-[1.0150] from-gray-200 to-[#001b5e] ease-in-out duration-700">
+      <img
+        className="w-full h-full rounded-xl group-hover:opacity-10 object-cover"
+        src={img}
+        alt="/"
+      />
       <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
         <h2 className="text-1xl md:text-1xl  md:mt-10px sm:mt-1px lg:mt-[5px] lg:text-3xl lg:mb-[20px] font-bold text-white tracking-wider text-center">
           {title}
