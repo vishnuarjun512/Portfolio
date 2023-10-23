@@ -21,7 +21,9 @@ const Projects = () => {
         <ProjectItem
           img={imageGallery}
           title={"Image Gallery"}
-          link={"https://github.com/vishnuarjun512/Calculator"}
+          link={
+            "https://github.com/vishnuarjun512/unsplash-image-gallery-ReactJS"
+          }
         />
         <ProjectItem
           img={mtvx}
