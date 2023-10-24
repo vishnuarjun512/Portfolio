@@ -6,17 +6,31 @@ import planti from "../assets/planti.png";
 import portfolio from "../assets/portfolio.png";
 import calculator from "../assets/calculator.png";
 import imageGallery from "../assets/imageGallery.png";
+import { useDarkMode } from "./DarkModeContext";
 
 const Projects = () => {
+  const { isDarkMode } = useDarkMode();
   return (
     <div
       id="projects"
-      className="max-w-[1440px] m-auto md:pl-[120px] p-4 py-16"
+      className={`${
+        isDarkMode ? "bg-[#14131a]" : "light-mode"
+      } max-w-[1440px] m-auto md:pl-[120px] p-4 py-16`}
     >
-      <h1 className="text-4xl font-bold text-center text-[#001b53]">
+      <h1
+        className={`${
+          isDarkMode ? "text-white" : "text-[#001b5e]"
+        } text-4xl font-bold text-center`}
+      >
         Projects
       </h1>
-      <p className="text-center text-xl pt-4 pb-6">Checkout my Projects!</p>
+      <p
+        className={`${
+          isDarkMode ? "text-white" : ""
+        } text-center text-xl pt-4 pb-6`}
+      >
+        Checkout my Projects!
+      </p>
       <div className="grid md:grid-cols-2 gap-12">
         <ProjectItem
           img={imageGallery}

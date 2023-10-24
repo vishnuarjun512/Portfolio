@@ -3,34 +3,84 @@
 @tailwind utilities;
 
 * {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
- :root {
-    --body_background: white;
-    --body_color:black;
-    --link_color:navy;
- }
+:root {
+  --body_background: white;
+  --body_color: black;
+  --link_color: navy;
+}
 
- [data-them="dark"]{
-    --body_background: #282c34;
-    --body_color: white;
-    --link_color: cyan;
- }
+[data-them="dark"] {
+  --body_background: #282c34;
+  --body_color: white;
+  --link_color: cyan;
+}
 
 .hide {
-   opacity: 0;
-   transform: translateY(40%);
-   transition: all 1s;
+  opacity: 0;
+  transform: translateY(40%);
+  transition: all 1s;
 }
 
 .show {
-   opacity: 1;
-   transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@media(prefers-reduced-motion) {
-   .hide {
-      transition: none;
-   }
+@media (prefers-reduced-motion) {
+  .hide {
+    transition: none;
+  }
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #535151; /* Text color */
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.dark-mode {
+  background-color: #212121; /* Dark background color */
+  color: #fff; /* Dark text color */
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+/* DarkModeSliderButton.css */
+.slider-button {
+  display: flex;
+  align-items: center;
+  height: 15px;
+  width: 50px;
+  background-color: #dddddd;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slider-button.light {
+  background-color: #4b4b4b;
+}
+
+.slider-button .slider {
+  width: 28px;
+  height: 28px;
+  background-color: #e9e8e8;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.3s;
+}
+
+.slider-button.light .slider {
+  transform: translateX(0);
+}
+
+.slider-button.dark .slider {
+  transform: translateX(35px);
 }
