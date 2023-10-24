@@ -5,12 +5,21 @@ import Skills from "./components/Skills";
 import Resume from "./components/Resume";
 import SideNav from "./components/SideNav";
 import React from "react";
-import { DarkModeProvider } from "./components/DarkModeContext";
+import { DarkModeProvider, useDarkMode } from "./components/DarkModeContext";
 
 function App() {
   return (
     <DarkModeProvider>
-    <div>
+      <InnerApp />
+    </DarkModeProvider>
+  );
+}
+
+function InnerApp() {
+  const { isDarkMode } = useDarkMode();
+
+  return (
+    <div className={`${isDarkMode ? "bg-[#14131a]" : ""}`}>
       <SideNav />
       <Main />
       <Skills />
@@ -18,7 +27,6 @@ function App() {
       <Resume />
       <Contact />
     </div>
-      </DarkModeProvider>
   );
 }
 
