@@ -5,11 +5,12 @@ import Skills from "./components/Skills";
 import Resume from "./components/Resume";
 import SideNav from "./components/SideNav";
 import React from "react";
+import { DarkModeProvider } from "./components/DarkModeContext";
 
 function App() {
   return (
+    <DarkModeProvider>
     <div>
-      {/* <DarkMode /> */}
       <SideNav />
       <Main />
       <Skills />
@@ -17,6 +18,7 @@ function App() {
       <Resume />
       <Contact />
     </div>
+      </DarkModeProvider>
   );
 }
 

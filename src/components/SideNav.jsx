@@ -8,15 +8,17 @@ import {
 import { GrProjects } from "react-icons/gr";
 import { BsMailbox, BsPerson } from "react-icons/bs";
 import { GiSkills } from "react-icons/gi";
+import { useDarkMode } from "./DarkModeContext";
 
 const SideNav = () => {
   const [nav, setNav] = useState(false);
+  const { isDarkMode } = useDarkMode();
   const handleNav = () => {
     setNav(!nav);
     // console.log("State changed ");
   };
   return (
-    <div>
+    <div className={`${isDarkMode ? "dark-mode" : "light-mode"}`}>
       <AiOutlineMenu
         onClick={handleNav}
         className="fixed top-4 right-4 z-[99] md:hidden block "
@@ -68,13 +70,21 @@ const SideNav = () => {
         ""
       )}
 
-      <div className="md:block hidden fixed top-[50%] translate-y-[-50%] ml-5 z-10">
+      <div
+        className={`${
+          isDarkMode ? "text-black" : ""
+        } md:block hidden fixed top-[50%] translate-y-[-50%] ml-5 z-20`}
+      >
         <div className="flex flex-col gap-[12px] ">
           <div className="flex flex-row gap-[10px] justify-start items-center text-2xl font-bold">
             <a
               href="#main"
               id="hover-button"
-              className="flex flex-row flex-initial rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+              className={`${
+                isDarkMode
+                  ? "bg-[#212121] text-white"
+                  : "shadow-gray-500 bg-gray-200"
+              } rounded-full shadow-lg  m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100`}
             >
               <AiOutlineHome size={30} />
             </a>
@@ -85,7 +95,11 @@ const SideNav = () => {
             <a
               href="#skills"
               id="hover-button"
-              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+              className={`${
+                isDarkMode
+                  ? "bg-[#212121] text-white"
+                  : "shadow-gray-500 bg-gray-200"
+              } rounded-full shadow-lg  m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100`}
             >
               <GiSkills size={30} />
             </a>
@@ -96,7 +110,11 @@ const SideNav = () => {
             <a
               href="#projects"
               id="hover-button"
-              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+              className={`${
+                isDarkMode
+                  ? "bg-[#212121] text-white"
+                  : "shadow-gray-500 bg-gray-200"
+              } rounded-full shadow-lg  m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100`}
             >
               <AiOutlineProject size={30} />
             </a>
@@ -107,7 +125,11 @@ const SideNav = () => {
             <a
               id="hover-button"
               href="#resume"
-              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+              className={`${
+                isDarkMode
+                  ? "bg-[#212121] text-white"
+                  : "shadow-gray-500 bg-gray-200"
+              } rounded-full shadow-lg  m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100`}
             >
               <BsPerson size={30} />
             </a>
@@ -118,7 +140,11 @@ const SideNav = () => {
             <a
               href="#contact"
               id="hover-button"
-              className="rounded-full shadow-lg bg-gray-200 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100"
+              className={`${
+                isDarkMode
+                  ? "bg-[#212121] text-white"
+                  : "shadow-gray-500 bg-gray-200"
+              } rounded-full shadow-lg  m-2 p-4 cursor-pointer hover:scale-[1.2] ease-in duration-100`}
             >
               <AiOutlineMail size={30} />
             </a>

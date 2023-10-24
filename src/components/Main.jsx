@@ -9,8 +9,11 @@ import {
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import "./SideNav.css";
+import DarkModeSlider from "./DarkModeSlider";
+import { useDarkMode } from "./DarkModeContext";
 
 const Main = () => {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
   function openPdfWindow(pdfUrl) {
     const newWindow = window.open("", "_blank");
     newWindow.document.write(`
@@ -26,14 +29,18 @@ const Main = () => {
   }
 
   return (
-    <div id="main">
+    <div id="main" className={`${isDarkMode ? "dark-mode" : "light-mode"}`}>
       <img
         className="w-full h-screen object-cover"
         src={img}
         alt="Vishnu's Image"
         loading="lazy"
       ></img>
-      <div className="w-full h-screen absolute top-0 left-0 bg-white/50">
+      <div
+        className={`${
+          isDarkMode ? "" : "bg-white/40"
+        } w-full h-screen absolute top-0 left-0`}
+      >
         <div className=" max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center">
           <h1 className="text-[40px] md:text-[50px] font-bold md:font-bold text-gray-800">
             I'm Vishnu V V
@@ -59,7 +66,7 @@ const Main = () => {
               repeat={Infinity}
             />
           </h2>
-          <div className="flex justify-center gap-[10px] pt-6 max-w-[200px] w-full hover:scale-110 hover:shadow-gray-300 duration-100 ease-in">
+          <div className="flex text-black justify-center gap-[10px] pt-6 max-w-[200px] w-full hover:scale-110 hover:shadow-gray-300 duration-100 ease-in">
             <a
               href="https://github.com/vishnuarjun512"
               target="_blank"
@@ -97,7 +104,19 @@ const Main = () => {
             </a>
           </div>
         </div>
-        <div className="absolute right-2 bottom-2 z-1 rounded-full shadow-lg sm:mx-2 mr-[-4px] sm:my-1 my-1 p-1 bg-gray-200 shadow-gray-500 cursor-pointer hover:scale-[1.2] ease-in duration-100 ">
+        <div className="hidden md:block absolute right-5 top-3 z-1">
+          <DarkModeSlider
+            isDarkMode={isDarkMode}
+            toggleDarkMode={toggleDarkMode}
+          />
+        </div>
+        <div
+          className={`${
+            isDarkMode
+              ? " text-white  bg-[#212121]"
+              : "shadow-gray-500 bg-gray-200 "
+          } absolute right-2 bottom-2 z-1 rounded-full md:rounded-2xl shadow-sm sm:mx-2 mr-[-4px] sm:my-1 my-1 p-1 md:py-2  cursor-pointer hover:scale-[1.2] ease-in duration-100 `}
+        >
           {/* <a href="RESUME.pdf" download="Vishnu's Resume.pdf"> */}
           <button
             onClick={() => openPdfWindow("RESUME.pdf")}

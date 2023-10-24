@@ -16,8 +16,10 @@ import Python from "../assets/Icons/python.png";
 import git from "../assets/Icons/git.png";
 import github from "../assets/Icons/github.png";
 import SkillSection from "./SkillSection";
+import { useDarkMode } from "./DarkModeContext";
 
 const Skills = () => {
+  const { isDarkMode } = useDarkMode();
   const data = [
     {
       title: "Frontend",
@@ -80,9 +82,17 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="max-w-[1440px] m-auto md:pl-20 p-4 pt-16 flex flex-col justify-center items-center"
+      className={`${
+        isDarkMode ? "bg-[#14131a]" : "light-mode"
+      }  max-w-[1440px] m-auto md:pl-20 p-4 pt-16 flex flex-col justify-center items-center`}
     >
-      <h1 className="text-4xl font-bold text-center text-[#001b5e]">Skills</h1>
+      <h1
+        className={`${
+          isDarkMode ? "text-white" : "text-[#001b5e]"
+        } text-4xl font-bold text-center`}
+      >
+        Skills
+      </h1>
       <div className="flex flex-row flex-wrap items-center justify-center gap-8 m-5 px-10">
         {data.map((item, idx) => (
           <SkillSection key={idx} title={item.title} items={item.items} />

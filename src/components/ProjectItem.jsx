@@ -1,9 +1,16 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
+import { useDarkMode } from "./DarkModeContext";
 
 const ProjectItem = ({ img, title, link }) => {
+  const { isDarkMode } = useDarkMode();
+
   return (
-    <div className="max-w-[100%] relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r hover:scale-[1.0150] from-gray-200 to-[#001b5e] ease-in-out duration-700">
+    <div
+      className={`${
+        isDarkMode ? "" : "shadow-xl"
+      } max-w-[100%] relative flex items-center justify-center h-auto w-full  shadow-gray-400 rounded-xl group hover:bg-gradient-to-b hover:scale-[1.0150] from-gray-700 to-[#14131a] ease-in-out duration-700`}
+    >
       <img
         className="w-full h-full rounded-xl group-hover:opacity-10 object-cover"
         src={img}
