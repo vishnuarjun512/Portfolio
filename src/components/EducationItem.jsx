@@ -1,6 +1,8 @@
 import React from "react";
+import { useDarkMode } from "./DarkModeContext";
 
 const EducationItem = ({ year, title, college, details }) => {
+  const { isDarkMode } = useDarkMode();
   return (
     <div className="flex flex-col justify-start hover:scale-[1.04] lg:hover:scale-[1.3] hover:shadow-gray-300 duration-100 ease-in">
       <ol className="flex flex-col py-2 md:flex-row relative border-l border-stone-400">
@@ -10,11 +12,19 @@ const EducationItem = ({ year, title, college, details }) => {
             <span className=" inline-block px-2 py-1 font-semibold text-white bg-[#00b15e] rounded-md">
               {year}
             </span>
-            <span className="text-lg font-semibold text-[#001b5e]">
+            <span
+              className={`${
+                isDarkMode ? "text-stone-500" : "text-[#001b5e]"
+              } text-lg font-semibold`}
+            >
               {title}
             </span>
           </p>
-          <span className="my-2 text-3xl font-bold leading-none text-black">
+          <span
+            className={`${
+              isDarkMode ? "text-stone-300" : "text-black"
+            } my-2 text-3xl font-bold leading-none `}
+          >
             {college}
           </span>
           <p className="my-0 text-base font-normal text-stone-500">{details}</p>

@@ -14,7 +14,7 @@ const DarkModeSliderButton = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-2">
       <h1 className="text-[19px] font-bold">
-        {isDarkMode ? "Light Mode" : "Dark Mode"}
+        {isDarkMode ? "Dark Mode" : "Light Mode"}
       </h1>
       <div
         onClick={handleSliderClick}

@@ -1,7 +1,8 @@
 import React from "react";
 import WorkItem from "./WorkItem";
-
+import { useDarkMode } from "./DarkModeContext";
 const Work = () => {
+  const { isDarkMode } = useDarkMode();
   const data = [
     {
       year: 2023,
@@ -20,11 +21,14 @@ const Work = () => {
   ];
 
   return (
-    <div
-      id="work"
-      className="flex flex-col max-w-[1540px] md:mx-[130px] md:my-0 m-auto md:pl-0 md:py-[80px] p-4"
-    >
-      <h1 className="text-4xl font-bold text-center text-[#001b5e]">Work</h1>
+    <div id="work" className="flex flex-col max-w-[1540px] p-10">
+      <h1
+        className={`${
+          isDarkMode ? "text-white" : "text-[#001b5e]"
+        } text-4xl font-bold text-center `}
+      >
+        Work
+      </h1>
       <div className="flex justify-center flex-col pt-[16px]">
         {data.map((item, idx) => (
           <WorkItem

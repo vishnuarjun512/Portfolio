@@ -1,19 +1,30 @@
 import React from "react";
-
+import { useDarkMode } from "./DarkModeContext";
 const Contact = () => {
+  const { isDarkMode } = useDarkMode();
   return (
     <div id="contact" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
-      <h1 className="py-4 text-4xl font-bold text-center text-[#001b5e]">
+      <h1
+        className={`${
+          isDarkMode ? "text-white" : "text-[#001b5e]"
+        } py-4 text-4xl font-bold text-center `}
+      >
         Contact Me
       </h1>
       <form
         action="https://getform.io/f/6c5d4a0a-3945-4e2b-89cf-cc52412ab93a"
         method="post"
         encType="multipart/form-data"
+        className={`${isDarkMode ? "text-black" : "light-mode"}`}
       >
         <div className="grid md:grid-cols-2 gap-4 w-full py-2">
           <div className="flex flex-col">
-            <label className="uppercase text-sm py-2" htmlFor="name">
+            <label
+              className={`${
+                isDarkMode ? "text-white" : ""
+              } uppercase text-sm py-2"`}
+              htmlFor="name"
+            >
               Name
             </label>
             <input
@@ -23,7 +34,12 @@ const Contact = () => {
             />
           </div>
           <div className="flex flex-col">
-            <label className="uppercase text-sm py-2" htmlFor="mobile">
+            <label
+              className={`${
+                isDarkMode ? "text-white" : ""
+              } uppercase text-sm py-2"`}
+              htmlFor="mobile"
+            >
               Phone Number
             </label>
             <input
@@ -33,7 +49,12 @@ const Contact = () => {
             />
           </div>
           <div className="flex flex-col">
-            <label className="uppercase text-sm py-2" htmlFor="email">
+            <label
+              className={`${
+                isDarkMode ? "text-white" : ""
+              } uppercase text-sm py-2"`}
+              htmlFor="email"
+            >
               Email
             </label>
             <input
@@ -43,7 +64,12 @@ const Contact = () => {
             />
           </div>
           <div className="flex flex-col">
-            <label className="uppercase text-sm py-2" htmlFor="subject">
+            <label
+              className={`${
+                isDarkMode ? "text-white" : ""
+              } uppercase text-sm py-2"`}
+              htmlFor="subject"
+            >
               Subject
             </label>
             <input
@@ -53,7 +79,12 @@ const Contact = () => {
             />
           </div>
           <div className="w-full flex flex-col col-span-1 md:col-span-2 py-2">
-            <label className="uppercase text-sm py-2" htmlFor="message">
+            <label
+              className={`${
+                isDarkMode ? "text-white" : ""
+              } uppercase text-sm py-2"`}
+              htmlFor="message"
+            >
               Message
             </label>
             <textarea
@@ -64,7 +95,11 @@ const Contact = () => {
             ></textarea>
           </div>
         </div>
-        <button className="bg-[#001b5e] text-gray-200 mt-4 w-full p-4 rounded-lg cursor-pointer hover:scale-110 ease-in duration-200">
+        <button
+          className={`${
+            isDarkMode ? "bg-[#3d3d3d]" : "bg-[#001b5e]"
+          }  text-gray-200 mt-4 w-full p-4 rounded-lg cursor-pointer hover:scale-110 ease-in duration-200`}
+        >
           Send Message
         </button>
       </form>

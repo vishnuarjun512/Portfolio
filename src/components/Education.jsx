@@ -1,5 +1,6 @@
 import React from "react";
 import EducationItem from "./EducationItem";
+import { useDarkMode } from "./DarkModeContext";
 
 const Education = () => {
   const data = [
@@ -22,13 +23,18 @@ const Education = () => {
       details: "Science - PCMC",
     },
   ];
+  const { isDarkMode } = useDarkMode();
 
   return (
     <div
       id="education"
-      className="flex justify-center items-center flex-col max-w-[1540px] md:mx-[150px] md:pl-20 p-4 pt-20"
+      className="flex justify-center items-center flex-col max-w-[1540px] p-10"
     >
-      <h1 className="text-4xl font-bold text-center text-[#001b5e]">
+      <h1
+        className={`${
+          isDarkMode ? "text-white" : "text-[#001b5e]"
+        } text-4xl font-bold text-center `}
+      >
         Education
       </h1>
       <div className="flex justify-center flex-col pt-[16px]">
