@@ -6,7 +6,7 @@ const Resume = () => {
   return (
     <div
       id="resume"
-      className="flex flex-col md:flex-row justify-center gap-20 ml-20"
+      className="flex flex-col md:flex-row justify-center gap-20 md:ml-20"
     >
       <Education />
       <Work />

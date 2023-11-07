@@ -34,7 +34,6 @@ const Main = () => {
         className="w-full h-screen object-cover"
         src={img}
         alt="Vishnu's Image"
-        loading="lazy"
       ></img>
       <div
         className={`${
