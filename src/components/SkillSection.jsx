@@ -14,7 +14,7 @@ const SkillSection = ({ title, items }) => {
           className="w-4 h-4" // Adjust the width and height as needed
           src={star}
           alt="Star"
-        />,
+        />
       );
     }
     return stars;
@@ -33,18 +33,18 @@ const SkillSection = ({ title, items }) => {
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center m-3 hover:scale-[1.2] gap-1 ease-in-out duration-100"
+            className="flex flex-col items-center justify-center m-3 gap-1 ease-in-out duration-100"
           >
-            <div className="relative ">
+            <div className="relative group/item">
               <img
-                className="w-[65px] rounded-lg h-[68px]"
+                className="w-[65px] rounded-lg h-[68px] translate-y-3 group-hover/item:translate-y-0 transition-all ease-in-out duration-300"
                 src={item.source}
                 alt={item.name}
               />
               <div
                 className={`${
                   isDarkMode ? "bg-[#1c1b23]" : "bg-[#61677A]"
-                } flex flex-col items-center justify-center h-[112%] w-[110%] text-bold text-[15px] text-center absolute top-0 left-0 right-0 bottom-0 opacity-0 hover:opacity-100 transition-opacity duration-600`}
+                } group-hover/item:translate-y-1 -translate-y-2 flex-col items-center justify-center text-bold text-[15px] text-center transition-all opacity-0 group-hover/item:opacity-100 duration-150`}
               >
                 <p className="text-[#F0F0F0]">{item.name}</p>
                 <div className="flex justify-center">
