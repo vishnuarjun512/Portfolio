@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../assets/background.jpeg";
 import { TypeAnimation } from "react-type-animation";
 import {
@@ -27,14 +27,36 @@ const Main = () => {
       </html>
     `);
   }
+  useEffect(() => {
+    const blurredImageDiv = document.querySelector(".blurred-img");
+    const imgElement = blurredImageDiv.querySelector("img");
+
+    function loaded() {
+      blurredImageDiv.classList.add("loaded");
+    }
+
+    if (imgElement.complete) {
+      loaded();
+    } else {
+      imgElement.addEventListener("load", loaded);
+    }
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      imgElement.removeEventListener("load", loaded);
+    };
+  }, []); // Empty dependency array means this effect runs once after the initial render
 
   return (
     <div id="main" className={`${isDarkMode ? "dark-mode" : "light-mode"}`}>
-      <img
-        className="w-full h-screen object-cover"
-        src={img}
-        alt="Vishnu's Image"
-      ></img>
+      <div className="blurred-img ">
+        <img
+          className="w-full h-screen object-cover object-center aspect-square"
+          src={img}
+          alt="Vishnu's Image"
+          loading="lazy"
+        ></img>
+      </div>
       <div
         className={`${
           isDarkMode ? "" : "bg-white/40"

@@ -84,3 +84,45 @@
 .slider-button.dark .slider {
   transform: translateX(30px);
 }
+
+.blurred-img {
+  background-image: url("./assets/background-blur.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; /* Add this line to position the ::before pseudo-element */
+}
+
+.blurred-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: pulse 2.5s infinite;
+  background-color: lightblue;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.blurred-img.loaded::before {
+  animation: none;
+  content: none;
+}
+
+.blurred-img img {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+.blurred-img.loaded img {
+  opacity: 1;
+}
