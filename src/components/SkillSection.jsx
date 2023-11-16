@@ -14,7 +14,7 @@ const SkillSection = ({ title, items }) => {
           className="w-4 h-4" // Adjust the width and height as needed
           src={star}
           alt="Star"
-        />
+        />,
       );
     }
     return stars;
@@ -24,12 +24,12 @@ const SkillSection = ({ title, items }) => {
     <div
       className={`${
         isDarkMode ? "bg-[#1c1b23]" : "bg-[rgb(97,103,122)] "
-      } border-1 min-h-[170px] min-w-[350px] p-2 items-center justify-evenly flex flex-col flex-wrap rounded-3xl shadow-2xl ease-in-out duration-100`}
+      } border-1 min-h-[170px] min-w-[350px] p-2 items-center justify-evenly flex flex-col rounded-3xl shadow-2xl ease-in-out duration-100`}
     >
       <h1 className="text-[#D8D9DA] sm:text-2xl text-2xl font-semibold underline">
         {title.toUpperCase()}
       </h1>
-      <div className="flex flex-row flex-wrap justify-evenly sm:gap-4 gap-2 mt-[8px] mb-[2px]">
+      <div className="flex flex-row flex-wrap items-center justify-center sm:gap-4 gap-2 mt-[8px] mb-[2px]">
         {items.map((item, index) => (
           <div
             key={index}

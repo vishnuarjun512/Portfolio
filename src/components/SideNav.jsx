@@ -9,20 +9,24 @@ import { GrProjects } from "react-icons/gr";
 import { BsMailbox, BsPerson } from "react-icons/bs";
 import { GiSkills } from "react-icons/gi";
 import { useDarkMode } from "./DarkModeContext";
+import DarkModeSlider from "./DarkModeSlider";
+import { MdDarkMode } from "react-icons/md";
 
 const SideNav = () => {
   const [nav, setNav] = useState(false);
-  const { isDarkMode } = useDarkMode();
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
   const handleNav = () => {
     setNav(!nav);
     // console.log("State changed ");
   };
   return (
     <div className={`${isDarkMode ? "dark-mode" : "light-mode"}`}>
-      <AiOutlineMenu
-        onClick={handleNav}
-        className="fixed top-4 right-4 z-[99] md:hidden block "
-      />
+      <div className="fixed top-4 right-4 z-[99] md:hidden flex justify-center items-center gap-1 ">
+        <MdDarkMode size={21} isDarkMode={isDarkMode} onClick={toggleDarkMode}>
+          Click
+        </MdDarkMode>
+        <AiOutlineMenu onClick={handleNav} className="" />
+      </div>
       {nav ? (
         <div className="fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20">
           <a
