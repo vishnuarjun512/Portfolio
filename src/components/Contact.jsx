@@ -31,6 +31,8 @@ const Contact = () => {
               className="border-2 rounded-lg flex p-3 border-gray-300"
               type="text"
               name="name"
+              id="name"
+              autoComplete="name"
             />
           </div>
           <div className="flex flex-col">
@@ -46,6 +48,8 @@ const Contact = () => {
               className="border-2 rounded-lg flex p-3 border-gray-300"
               type="text"
               name="mobile"
+              id="mobile"
+              autoComplete="mobile"
             />
           </div>
           <div className="flex flex-col">
@@ -61,6 +65,8 @@ const Contact = () => {
               className="border-2 rounded-lg flex p-3 border-gray-300"
               type="email"
               name="email"
+              id="email"
+              autoComplete="email"
             />
           </div>
           <div className="flex flex-col">
@@ -76,6 +82,8 @@ const Contact = () => {
               className="border-2 rounded-lg flex p-3 border-gray-300"
               type="text"
               name="subject"
+              id="subject"
+              autoComplete="subject"
             />
           </div>
           <div className="w-full flex flex-col col-span-1 md:col-span-2 py-2">
@@ -90,6 +98,7 @@ const Contact = () => {
             <textarea
               name="message"
               id="message"
+              autoComplete="message"
               rows="10"
               className="w-[100%] border-4 rounded-lg flex p-3 border-gray-300"
             ></textarea>
