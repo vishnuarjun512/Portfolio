@@ -6,10 +6,49 @@ import planti from "../assets/planti.png";
 import portfolio from "../assets/portfolio.png";
 import calculator from "../assets/calculator.png";
 import imageGallery from "../assets/imageGallery.png";
+import rozilla from "../assets/rozilla.png";
 import { useDarkMode } from "./DarkModeContext";
 
 const Projects = () => {
   const { isDarkMode } = useDarkMode();
+
+  const projects = [
+    {
+      name: "Rozilla RealEstate",
+      link: "https://github.com/vishnuarjun512/mern-RealEstate",
+      image: rozilla,
+    },
+    {
+      name: "Image Gallery",
+      link: "https://github.com/vishnuarjun512/unsplash-image-gallery-ReactJS",
+      image: imageGallery,
+    },
+    {
+      name: "Movie Streaming Website",
+      link: "https://github.com/vishnuarjun512/Movie-Website/tree/dev",
+      image: mtvx,
+    },
+    {
+      name: "Plant Ecommerce",
+      link: "https://github.com/vishnuarjun512/Plant_Ecommerce",
+      image: planti,
+    },
+    {
+      name: "Data Analytics",
+      link: "https://github.com/vishnuarjun512/Data-Finance-React",
+      image: DA,
+    },
+    {
+      name: "Portfolio",
+      link: "https://github.com/vishnuarjun512/portfolio",
+      image: portfolio,
+    },
+    {
+      name: "Simple Calculator",
+      link: "https://github.com/vishnuarjun512/Calculator",
+      image: calculator,
+    },
+  ];
   return (
     <div
       id="projects"
@@ -32,38 +71,14 @@ const Projects = () => {
         Checkout my Projects!
       </p>
       <div className="grid md:grid-cols-2 gap-12">
-        <ProjectItem
-          img={imageGallery}
-          title={"Image Gallery"}
-          link={
-            "https://github.com/vishnuarjun512/unsplash-image-gallery-ReactJS"
-          }
-        />
-        <ProjectItem
-          img={mtvx}
-          title={"Movie Streaming Website"}
-          link={"https://github.com/vishnuarjun512/Movie-Website/tree/dev"}
-        />
-        <ProjectItem
-          img={planti}
-          title={"Plant Ecommerce"}
-          link={"https://github.com/vishnuarjun512/Plant_Ecommerce"}
-        />
-        <ProjectItem
-          img={DA}
-          title={"Data Analytics"}
-          link={"https://github.com/vishnuarjun512/Data-Finance-React"}
-        />
-        <ProjectItem
-          img={portfolio}
-          title={"Portfolio"}
-          link={"https://github.com/vishnuarjun512/portfolio"}
-        />
-        <ProjectItem
-          img={calculator}
-          title={"Simple Calculator"}
-          link={"https://github.com/vishnuarjun512/Calculator"}
-        />
+        {projects.map((project, index) => (
+          <ProjectItem
+            key={index}
+            img={project.image}
+            title={project.name}
+            link={project.link}
+          />
+        ))}
       </div>
     </div>
   );

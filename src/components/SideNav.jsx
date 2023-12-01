@@ -22,7 +22,7 @@ const SideNav = () => {
   return (
     <div className={`${isDarkMode ? "dark-mode" : "light-mode"}`}>
       <div className="fixed top-4 right-4 z-[99] md:hidden flex justify-center items-center gap-1 ">
-        <MdDarkMode size={21} isDarkMode={isDarkMode} onClick={toggleDarkMode}>
+        <MdDarkMode size={21} onClick={toggleDarkMode}>
           Click
         </MdDarkMode>
         <AiOutlineMenu onClick={handleNav} className="" />
