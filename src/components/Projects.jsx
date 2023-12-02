@@ -16,36 +16,43 @@ const Projects = () => {
     {
       name: "Rozilla RealEstate",
       link: "https://github.com/vishnuarjun512/mern-RealEstate",
+      tech: ["MERN Stack", "TailwindCSS", "Redux", "Firebase"],
       image: rozilla,
     },
     {
       name: "Image Gallery",
       link: "https://github.com/vishnuarjun512/unsplash-image-gallery-ReactJS",
+      tech: ["ReactJS", "TailwindCSS", "Unsplash API"],
       image: imageGallery,
     },
     {
       name: "Movie Streaming Website",
       link: "https://github.com/vishnuarjun512/Movie-Website/tree/dev",
+      tech: ["ReactJS", "TailwindCSS"],
       image: mtvx,
     },
     {
       name: "Plant Ecommerce",
       link: "https://github.com/vishnuarjun512/Plant_Ecommerce",
+      tech: ["ReactJS", "SASS"],
       image: planti,
     },
     {
       name: "Data Analytics",
       link: "https://github.com/vishnuarjun512/Data-Finance-React",
+      tech: ["ReactJS"],
       image: DA,
     },
     {
       name: "Portfolio",
       link: "https://github.com/vishnuarjun512/portfolio",
+      tech: ["ReactJS", "TailwindCSS"],
       image: portfolio,
     },
     {
       name: "Simple Calculator",
       link: "https://github.com/vishnuarjun512/Calculator",
+      tech: ["Javascript"],
       image: calculator,
     },
   ];
@@ -77,6 +84,7 @@ const Projects = () => {
             img={project.image}
             title={project.name}
             link={project.link}
+            tech={project.tech}
           />
         ))}
       </div>
