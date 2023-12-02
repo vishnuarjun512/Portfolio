@@ -51,7 +51,7 @@ const Main = () => {
     <div id="main" className={`${isDarkMode ? "dark-mode" : "light-mode"}`}>
       <div className="blurred-img ">
         <img
-          className="w-full h-screen object-cover object-center aspect-square"
+          className="w-screen h-screen object-cover aspect-square"
           src={img}
           alt="Vishnu's Image"
           loading="lazy"

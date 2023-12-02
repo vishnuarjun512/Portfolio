@@ -18,42 +18,70 @@ const Projects = () => {
       link: "https://github.com/vishnuarjun512/mern-RealEstate",
       tech: ["MERN Stack", "TailwindCSS", "Redux", "Firebase"],
       image: rozilla,
+      hosted: {
+        yes: true,
+        link: "https://rozilla-realestate.onrender.com/",
+      },
     },
     {
       name: "Image Gallery",
       link: "https://github.com/vishnuarjun512/unsplash-image-gallery-ReactJS",
       tech: ["ReactJS", "TailwindCSS", "Unsplash API"],
       image: imageGallery,
+      hosted: {
+        yes: false,
+        link: "",
+      },
     },
     {
       name: "Movie Streaming Website",
       link: "https://github.com/vishnuarjun512/Movie-Website/tree/dev",
-      tech: ["ReactJS", "TailwindCSS"],
+      tech: ["ReactJS", "TailwindCSS", "MovieListAPI"],
       image: mtvx,
+      hosted: {
+        yes: false,
+        link: "",
+      },
     },
     {
       name: "Plant Ecommerce",
       link: "https://github.com/vishnuarjun512/Plant_Ecommerce",
       tech: ["ReactJS", "SASS"],
       image: planti,
+      hosted: {
+        yes: false,
+        link: "",
+      },
     },
     {
       name: "Data Analytics",
       link: "https://github.com/vishnuarjun512/Data-Finance-React",
-      tech: ["ReactJS"],
+      tech: ["ReactJS", "Tailwind"],
       image: DA,
+      hosted: {
+        yes: false,
+        link: "",
+      },
     },
     {
       name: "Portfolio",
       link: "https://github.com/vishnuarjun512/portfolio",
       tech: ["ReactJS", "TailwindCSS"],
       image: portfolio,
+      hosted: {
+        yes: true,
+        link: "https://vishnuarjun512.github.io/portfolio/",
+      },
     },
     {
       name: "Simple Calculator",
       link: "https://github.com/vishnuarjun512/Calculator",
       tech: ["Javascript"],
       image: calculator,
+      hosted: {
+        yes: true,
+        link: "https://vishnuarjun512.github.io/Calculator/",
+      },
     },
   ];
   return (
@@ -85,6 +113,7 @@ const Projects = () => {
             title={project.name}
             link={project.link}
             tech={project.tech}
+            hosted={project.hosted}
           />
         ))}
       </div>
