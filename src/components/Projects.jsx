@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectItem from "./ProjectItem";
 import DA from "../assets/dataAnalytics.png";
 import mtvx from "../assets/mtvx.png";
@@ -34,7 +33,7 @@ const Projects = () => {
       },
     },
     {
-      name: "Movie Streaming Website",
+      name: "MTVx Movies",
       link: "https://github.com/vishnuarjun512/Movie-Website/tree/dev",
       tech: ["ReactJS", "TailwindCSS", "MovieListAPI"],
       image: mtvx,
@@ -44,7 +43,7 @@ const Projects = () => {
       },
     },
     {
-      name: "Plant Ecommerce",
+      name: "Plantii Ecommerce",
       link: "https://github.com/vishnuarjun512/Plant_Ecommerce",
       tech: ["ReactJS", "SASS"],
       image: planti,
